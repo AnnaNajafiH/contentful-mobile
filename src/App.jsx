@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import MobileData from './mobile/MobileData'
 
 import './App.css'
 
