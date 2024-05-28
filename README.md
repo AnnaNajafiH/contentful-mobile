@@ -1,8 +1,16 @@
 # workflow
 test dev env
+
 git add commit push
+
 merge and resolve conflicts
+
 deploy gh-page
+
+# subject
+make a content website
+
+using 'contentful' CMS
 
 
 
