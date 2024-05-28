@@ -1,3 +1,13 @@
+# workflow
+test dev env
+git add commit push
+merge and resolve conflicts
+deploy gh-page
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
