@@ -12,4 +12,4 @@ function MobileData() {
   )
 }
 
-export default MobileDat
+export default MobileData
