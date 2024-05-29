@@ -38,9 +38,15 @@ function MobileData() {
         <div>Error: {error.message}</div>
       ) : (
         data.map((e) => (
-          <div key={e?.fields.mobileId}>
-            {e?.fields.mobileName}
+         
+          <div key={e?.fields.mobileId} className='h-80 w-48 border border-red-400 mb-4 '>
+            <img src={e?.fields.image.fields.file.url} alt="mobile" className='h-50'/>
+            <p className='text-blue-600'>{e?.fields.mobileName}</p>
+            <p>{e.fields.rating}</p>
+            <p className='text-red-600'>{e?.fields.price}</p>
+            
           </div>
+         
         ))
       )}
     </>
