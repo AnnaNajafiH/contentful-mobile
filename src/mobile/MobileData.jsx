@@ -39,8 +39,8 @@ function MobileData() {
       ) : (
         data.map((e) => (
          
-          <div key={e?.fields.mobileId} className='h-80 w-48 border border-grey-400 mb-4 '>
-            <img src={e?.fields.image.fields.file.url} alt="mobile" className='h-50'/>
+          <div key={e?.fields.mobileId} className='h-80 w-48 border border-grey-400 hover:bg-gray-100'>
+            <img src={e?.fields.image.fields.file.url} alt="mobile" className='w-2/3 text-center h-50 cursor-pointer my-4 mx-auto'/>
             <p className='text-blue-600'>{e?.fields.mobileName}</p>
             <p>
               <i className="fa-solid fa-star text-orange-400"></i>
@@ -50,7 +50,7 @@ function MobileData() {
               <i className="fa-solid fa-star-half-stroke text-orange-400"></i>
               
             {e.fields.rating}</p>
-            <p className='text-red-600'>{e?.fields.price}</p>
+            <p className='text-red-600 '>€{e?.fields.price}</p>
             
           </div>
          
