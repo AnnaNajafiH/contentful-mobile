@@ -32,7 +32,14 @@ function MobileData() {
   }, []);
 
   return (
-    <div className="w-5/6 mx-auto flex my-4">
+    <div className="w-5/6 mx-auto  my-4">
+      <div className="text-center p-4 mb-4">
+        <h1 className="font-bold text-3xl text-gray-800 animation animate-pink">WELCOME TO TechTop!</h1> <br />
+        <p className="text-gray-600">TechTop is an online shop for smartphones, tablets, and smart
+           gadgets. We deliver to customers in 190 countries.</p>
+
+           
+      </div>
       <div className="flex flex-wrap gap-4 static">
         {error ? (
           <div>Error: {error.message}</div>
