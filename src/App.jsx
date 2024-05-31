@@ -14,11 +14,12 @@ function App() {
    <>
       <Nav />
       <Routes>
-        <Route path="/" />
-        <Route index element = {<Phone />}  />
-        <Route path="/computer" element={<Computer />} />
-        <Route path="/game" element={<Game />} />
-        <Route path="/sale" element={<Sale />} />
+        <Route path="/" >
+          <Route index element = {<Phone />}  />
+          <Route path="/computer" element={<Computer />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/sale" element={<Sale />} />
+       </Route>
       </Routes>
       {/* <div className="w-5/6 mx-auto flex gap-4">
     <div className='w-5/6 mx-auto border border-orange-400 p-2'>
