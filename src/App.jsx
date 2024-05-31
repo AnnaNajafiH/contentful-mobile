@@ -5,8 +5,8 @@ import Computer from "./pages/Computer"
 import Game from "./pages/Game";
 import Sale from "./pages/Sale";
 import Footer from "./component/Footer";
-import MobileData from './mobile/MobileData'
-import Header from './mobile/Header'
+import MobileData from "./pages/Phone";
+// import Header from './mobile/Header'
 
 
 function App() {
@@ -19,14 +19,14 @@ function App() {
         <Route path="/game" element={<Game />} />
         <Route path="/sale" element={<Sale />} />
       </Routes>
-      <div className="w-5/6 mx-auto flex gap-4">
+      {/* <div className="w-5/6 mx-auto flex gap-4">
     <div className='w-5/6 mx-auto border border-orange-400 p-2'>
-      <Header />
-      <div className='flex flex-wrap gap-4 static'>
+      {/* <Header /> */}
+      {/* <div className='flex flex-wrap gap-4 static'> */} 
       <MobileData />
-      </div>
+      {/* </div>
     </div>
-    </div>
+    </div> */}
       <Footer />
     </BrowserRouter>
   );
