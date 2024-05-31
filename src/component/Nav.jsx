@@ -23,10 +23,10 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-gray-800 font-bold  p-8">
+      <nav className="bg-gray-800 font-bold z-10 p-8 ">
         <ul className="flex space-x-4">
-          <li className="font-bold text-blue-200 pr-10 mr-10 text-2xl">
-            GIZTOP.
+          <li className="font-bold text-blue-200 pr-10 font mr-10 text-2xl">
+            TechTop
           </li>
 
           <li>
