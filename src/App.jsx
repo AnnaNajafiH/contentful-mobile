@@ -7,10 +7,7 @@ import Sale from "./pages/Sale";
 import Footer from "./component/Footer";
 import MobileData from './mobile/MobileData'
 import Header from './mobile/Header'
-import Footer from './mobile/Footer'
 
-
-import MobileData from "./mobile/MobileData";
 
 function App() {
   return (
@@ -28,7 +25,7 @@ function App() {
       <div className='flex flex-wrap gap-4 static'>
       <MobileData />
       </div>
-      <Footer />
+    </div>
     </div>
       <Footer />
     </BrowserRouter>
