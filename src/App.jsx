@@ -1,20 +1,21 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Nav from "./component/Nav";
 import Phone from "./pages/Phone";
 import Computer from "./pages/Computer"
 import Game from "./pages/Game";
 import Sale from "./pages/Sale";
 import Footer from "./component/Footer";
-import MobileData from "./pages/Phone";
 // import Header from './mobile/Header'
 
 
 function App() {
   return (
-    <BrowserRouter>
+   /*  <BrowserRouter> */
+   <>
       <Nav />
       <Routes>
-        <Route path="/" element={<Phone />} />
+        <Route path="/" />
+        <Route index element = {<Phone />}  />
         <Route path="/computer" element={<Computer />} />
         <Route path="/game" element={<Game />} />
         <Route path="/sale" element={<Sale />} />
@@ -23,12 +24,13 @@ function App() {
     <div className='w-5/6 mx-auto border border-orange-400 p-2'>
       {/* <Header /> */}
       {/* <div className='flex flex-wrap gap-4 static'> */} 
-      <MobileData />
+   {/*   <MobileData /> */}
       {/* </div>
     </div>
     </div> */}
       <Footer />
-    </BrowserRouter>
+   {/*  </BrowserRouter> */}
+   </>
   );
 }
 

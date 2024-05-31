@@ -32,7 +32,7 @@ function MobileData() {
   }, []);
 
   return (
-    <div className="w-5/6 mx-auto flex gap-4">
+    <div className="w-5/6 mx-auto flex my-4">
       <div className="flex flex-wrap gap-4 static">
         {error ? (
           <div>Error: {error.message}</div>
@@ -45,7 +45,7 @@ function MobileData() {
               <img
                 src={e?.fields.image.fields.file.url}
                 alt="mobile"
-                className="w-2/3 text-center h-50 cursor-pointer my-4 mx-auto"
+                className="w-2/3 text-center h-40 cursor-pointer my-4 mx-auto"
               />
               <p className="text-blue-700 p-1 text-sm">
                 {e?.fields.mobileName}

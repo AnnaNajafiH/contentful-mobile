@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Nav = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
