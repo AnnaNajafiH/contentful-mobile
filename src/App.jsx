@@ -15,13 +15,14 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/">
+          <Route path="/contentful-mobile/" element={<LandingPage />}></Route>
           <Route index element={<Phone />} />
           <Route path="/laptop" element={<Laptop />} />
           <Route path="/game" element={<Game />} />
           <Route path="/sale" element={<Sale />} />
         </Route>
       </Routes>
-      <LandingPage/>
+      {/* <LandingPage/> */}
       <Footer />
       {/*  </BrowserRouter> */}
     </>
