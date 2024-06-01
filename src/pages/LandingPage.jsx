@@ -15,16 +15,16 @@ const LandingPage = () => {
     >
       <main className="py-20">
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-blue-300 mb-4">
             Welcome to TechTop!
           </h2>
-          <p className="text-lg text-white mb-8">
+          <p className="text-lg font-bold text-blue-300 mb-8">
             TechTop is an online shop for smartphones, tablets, and smart
             gadgets. We deliver to customers in 190 countries.
           </p>
           <Link
             to="/sale"
-            className="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+            className="bg-blue-300 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600"
           >
             Explore Our Sale
           </Link>
