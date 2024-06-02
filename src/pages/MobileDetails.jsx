@@ -6,12 +6,10 @@ const MobileDetails = () => {
 const [mobile, setMobile] = useState(null);
 const navigate = useNavigate();
 const {mobileId} = useParams();
-console.log(mobileId);
 
 const getMobileById = async(mobileId) => {
 try {
 const entry = await client.getEntry(mobileId);
-console.log(entry);
 return entry;
 } catch (error) {
 console.log('Error fetching the Entry', error);
