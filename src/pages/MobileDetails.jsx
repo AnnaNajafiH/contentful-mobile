@@ -45,7 +45,7 @@ return (
                 <i className="fa-solid fa-star-half-stroke text-orange-400"></i>
                 {mobile.rating}
               </p>
-              <p><p className="text-red-600 p-1 text-sm">€{mobile?.price}</p></p>
+              <p className="text-red-600 p-1 text-sm">€{mobile?.price}</p>
               <h2 className="text-sky-400 text-base">FREE Returns</h2>
               <p className="text-xs italic">Prices for items sold by TechTop include VAT. 
               Depending on your delivery address, VAT may vary at Checkout. </p>
