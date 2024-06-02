@@ -34,11 +34,7 @@ return (
     <p>{mobile.mobileName}</p>
     </div>
     <div className=" w-1/5">
-   
     </div>
-    
-    
-
 </div>
 ))
 }
