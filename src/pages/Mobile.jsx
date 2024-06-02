@@ -71,7 +71,7 @@ function MobileData() {
                     <span className="font-medium">{e?.fields.delivery}</span>
                   </div>
                 ) : (
-                  <span className="text-red-600 text-xs uppercase text-center">
+                  <span className="text-red-600 text-xs uppercase text-center p-1">
                     sold out
                   </span>
                 )}
