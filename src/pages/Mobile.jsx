@@ -1,25 +1,15 @@
-import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+import {Link }from 'react-router-dom';
+import {client} from './client';
 
 function MobileData() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
-  const client = createClient({
-    space: import.meta.env.VITE_SPACE_ID,
-    environment: "master",
-    accessToken: import.meta.env.VITE_ACCESS_TOKEN,
-  });
-
-  const fetchMobiles = async (type = "mobile", limit = 10, skip = 0) => {
+  const fetchMobiles = async (type = "mobile") => {
     try {
-      const entry = await client.getEntries({
-        content_type: type,
-        limit,
-        skip,
-      });
-      setData(entry?.items);
-      console.log(entry.items);
+      const entries = await client.getEntries({content_type: type});
+      setData(entries?.items);
     } catch (error) {
       console.error(error);
       setError(error);
@@ -27,7 +17,7 @@ function MobileData() {
   };
 
   useEffect(() => {
-    fetchMobiles("mobile", 10, 0);
+    fetchMobiles("mobile");
     return () => {};
   }, []);
 
@@ -36,9 +26,8 @@ function MobileData() {
       <div className="text-center p-4 mb-4">
         <h1 className="font-bold text-3xl text-gray-800 animation animate-pink">WELCOME TO TechTop!</h1> <br />
         <p className="text-gray-600">TechTop is an online shop for smartphones, tablets, and smart
-           gadgets. We deliver to customers in 190 countries.</p>
+          gadgets. We deliver to customers in 190 countries.</p>
 
-           
       </div>
       <div className="flex flex-wrap gap-4 static">
         {error ? (
@@ -46,7 +35,7 @@ function MobileData() {
         ) : (
           data.map((e) => (
             <div
-              key={e?.fields.mobileId}
+              key={e?.sys.id}
               className="sub-container h-80 w-48 border border-grey-400 hover:bg-gray-100"
             >
               <img
@@ -66,7 +55,9 @@ function MobileData() {
                 {e.fields.rating}
               </p>
               <button className="text-white bg-cyan-400 w-2/3 h-10 hover:bg-slate-950">
-                More Info
+                <Link to={`/details/${e?.sys.id}`}>More Info</Link>
+                
+              
               </button>
               <p className="text-red-600 p-1 text-sm">€{e?.fields.price}</p>
               <div>
@@ -84,7 +75,7 @@ function MobileData() {
               </div>
             </div>
           ))
-        )}
+        )};
       </div>
     </div>
   );
