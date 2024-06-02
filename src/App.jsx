@@ -6,7 +6,6 @@ import Game from "./pages/Game";
 import Sale from "./pages/Sale";
 import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
-import MobileDetails from "./pages/MobileDetails";
 
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
           <Route path="/details/:mobileId" element = {<MobileDetails />} />
         </Route>
       </Routes>
-      <LandingPage/>
+      {/* <LandingPage/> */}
       <Footer />
     </>
   );

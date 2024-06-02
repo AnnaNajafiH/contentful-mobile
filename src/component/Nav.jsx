@@ -10,7 +10,7 @@ const Nav = () => {
   const navLinkStyles = ({ isActive }) => {
     return isActive ? "font-bold text-sm text-white" : "text-white";
   };
-  const navLinkHoverStyles = "hover:bg-blue-200 p-1";
+  const navLinkHoverStyles = "hover:bg-blue-200 p-1 rounded";
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);
