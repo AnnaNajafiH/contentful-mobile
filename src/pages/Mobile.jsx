@@ -46,7 +46,7 @@ function MobileData() {
               <p className="text-blue-700 p-1 text-sm">
                 {e?.fields.mobileName}
               </p>
-              <p className="p-1 text-sm">
+              <p className="p-1 text-sm ">
                 <i className="fa-solid fa-star text-orange-400"></i>
                 <i className="fa-solid fa-star text-orange-400"></i>
                 <i className="fa-solid fa-star text-orange-400"></i>
@@ -54,6 +54,9 @@ function MobileData() {
                 <i className="fa-solid fa-star-half-stroke text-orange-400"></i>
                 {e.fields.rating}
               </p>
+              
+              
+              
               <button className="text-white bg-cyan-400 w-2/3 h-10 hover:bg-slate-950">
                 <Link to={`/details/${e?.sys.id}`}>More Info</Link>
                 
