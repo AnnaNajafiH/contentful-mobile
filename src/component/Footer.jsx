@@ -16,6 +16,10 @@ import {
 } from "react-icons/fa";
 
 
+
+
+
+
 const sections = [
   {
     title: "Shop",

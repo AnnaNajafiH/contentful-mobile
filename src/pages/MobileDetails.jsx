@@ -47,7 +47,7 @@ return (
               </p>
               <p><p className="text-red-600 p-1 text-sm">€{mobile?.price}</p></p>
               <h2 className="text-sky-400 text-base">FREE Returns</h2>
-              <p className="text-xs">Prices for items sold by TechTop include VAT. 
+              <p className="text-xs italic">Prices for items sold by TechTop include VAT. 
               Depending on your delivery address, VAT may vary at Checkout. </p>
             <br />
             <Tabs>
