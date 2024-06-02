@@ -23,9 +23,11 @@ const Nav = () => {
     <>
       <nav className="bg-slate-700 font-bold z-10 p-4 md:p-8">
         <div className="flex justify-between items-center">
-          <div className="font-bold text-blue-200 pr-10 font mr-10 text-2xl">
-            TechTop
-          </div>
+          <a href="/contentful-mobile/">
+            <div className="font-bold text-blue-200 pr-10 font mr-10 text-2xl">
+              TechTop
+            </div>
+          </a>
           <div className="md:hidden">
             <button
               onClick={() => setMenuOpen(!menuOpen)}
