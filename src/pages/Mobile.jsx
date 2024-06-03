@@ -5,6 +5,7 @@ import {client} from './client';
 function MobileData() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
+  const [selectBrand, setSelectBrand] = useState('all');
 
   const fetchMobiles = async (type = "mobile") => {
     try {
@@ -21,24 +22,40 @@ function MobileData() {
     return () => {};
   }, []);
 
+  const handleBrandChange = (e) => {
+    setSelectBrand(e.target.value);
+  }
+  const filteredData = selectBrand === 'all'? data: data.filter(e => e.fields.brand === selectBrand);
   return (
     <div className="w-5/6 mx-auto  my-4">
-      <div className="text-center p-4 mb-4">
+      <div className="text-center p-4 mb-4 relative">
         <h1 className="font-bold text-3xl text-gray-800 animation animate-pink">WELCOME TO TechTop!</h1> <br />
-        <p className="text-gray-600">TechTop is an online shop for smartphones, tablets, and smart
+        <p className="text-gray-600 mb-3">TechTop is an online shop for smartphones, tablets, and smart
           gadgets. We deliver to customers in 190 countries.</p>
 
+        <div className="absolute left-0 pb-4">
+        <label htmlFor="mob" className="">Select by :</label>
+        <select name="mobile" id="mob" className="bg-slate-200 rounded-lg hover:bg-slate-300" onChange={handleBrandChange}>
+        <option value="all">--product--</option>
+          <option value="Apple">Apple</option>
+          <option value="Samsung">Samsung</option>
+          <option value="Google">Google Pixel</option>
+          <option value="VIVO">VIVO</option>
+          <option value="Nokia">Nokia</option>
+        </select> 
+        </div>
+
       </div>
-      <div className="flex flex-wrap gap-4 static">
+      <div className="flex flex-wrap gap-4 static mt-5">
         {error ? (
           <div>Error: {error.message}</div>
         ) : (
-          data.map((e) => (
-            <div
+          filteredData.map((e) => (
+           <div
               key={e?.sys.id}
               className="sub-container h-80 w-48 border border-grey-400 hover:bg-gray-100"
             >
-              <img
+               <img
                 src={e?.fields.image.fields.file.url}
                 alt="mobile"
                 className="w-2/3 text-center h-40 cursor-pointer my-4 mx-auto"
@@ -55,12 +72,9 @@ function MobileData() {
                 {e.fields.rating}
               </p>
               
-              
-              
               <button className="text-white bg-cyan-400 w-2/3 h-10 hover:bg-slate-950">
                 <Link to={`/details/${e?.sys.id}`}>More Info</Link>
                 
-              
               </button>
               <p className="text-red-600 p-1 text-sm">€{e?.fields.price}</p>
               <div>
@@ -75,13 +89,68 @@ function MobileData() {
                     sold out
                   </span>
                 )}
-              </div>
-            </div>
+              </div> 
+            </div>   
           ))
-        )};
+        )}
       </div>
     </div>
-  );
+  )
 }
 
-export default MobileData;
+export default MobileData; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -34,7 +34,7 @@ return (
         <Link onClick={()=> navigate(-1) } className="hover:bg-orange-600 hover:text-white mt-4 rounded"> <i className="fa-solid fa-angles-left"></i></Link>
     </div>
 
-    <div className="w-2/5 text-lg font-medium px-4 py-2  ">
+    <div className="w-2/5 text-lg font-medium px-4 py-2 ">
     <p>{mobile.quickview.content[0].content[0].value}</p>
     <br />
     <p className="text-sm  border-b-2 border-gray-300">
@@ -65,13 +65,11 @@ return (
                 <p className='text-base font-bold'>SCREEN :  <span className='text-sm font-normal'>{mobile.screen}</span></p>
                 <p className='text-base font-bold'>PROCESSOR :  <span className='text-sm font-normal'>{mobile.processor}</span></p>
                 <p className='text-base font-bold'>RAM :  <span className='text-sm font-normal'>{mobile.ram}</span></p>
-            
-
                 </TabPanel>
             </Tabs>
     </div>
-    
     <div className=" w-1/5 p-2  "> right side
+    <Link to='/pages/filter'>Apple</Link>
     </div>
 </div>
 ))
