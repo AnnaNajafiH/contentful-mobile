@@ -7,6 +7,7 @@ import Sale from "./pages/Sale";
 import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
 import MobileDetails from "./pages/MobileDetails";
+import LaptopDetails from "./pages/LaptopDetails";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="sale" element={<Sale />} />
           <Route path="contentful-mobile" element={<LandingPage/>} />
           <Route path="details/:mobileId" element = {<MobileDetails />} />
+          <Route path="details/:laptopId" element = {<LaptopDetails />} />
         </Route>
       </Routes>
       {/* <LandingPage/> */}

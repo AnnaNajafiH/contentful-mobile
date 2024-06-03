@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 
-function LaptopData() {
+function LaptopDetails() {
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
 
@@ -33,7 +33,21 @@ function LaptopData() {
 
   return (
     <div className="w-5/6 mx-auto  my-4">
-      
+      <div className="text-center p-4 mb-4">
+        <h1 className="font-bold text-3xl text-gray-800 animation animate-pink">
+          Find Your Perfect Laptop!
+        </h1>{" "}
+        <br />
+        <p className="text-gray-600">
+          Choosing the right laptop depends largely on how you plan to use it.
+          While the technical specs are crucial, the design often plays a key
+          role in your decision. From sleek and stylish to robust and
+          functional, there's a laptop for every preference. Generally, laptops
+          can be categorized into three main types, each catering to different
+          needs and tastes. Explore our range to find the one that fits you
+          perfectly.
+        </p>
+      </div>
       <div className="flex flex-wrap gap-4 static">
         {error ? (
           <div>Error: {error.message}</div>
@@ -88,4 +102,4 @@ function LaptopData() {
   );
 }
 
-export default LaptopData;
+export default LaptopDetails;
