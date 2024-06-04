@@ -68,8 +68,21 @@ return (
                 </TabPanel>
             </Tabs>
     </div>
-    <div className=" w-1/5 p-2  "> right side
-    <Link to='/pages/filter'>Apple</Link>
+    <div className=" w-1/5 p-2 border rounded-lg">
+    <p className=" p-2 font-light text-lg"><sup>€</sup>{mobile?.price}</p>
+    <p className="mb-2">Delivery <span className="font-bold">{mobile?.delivery}</span></p>
+
+    <button className="bg-yellow-300 w-full mt-4 rounded-xl border border-yellow-400 py-1 hover:bg-yellow-400 hover:border-none" title="Buy Now">
+        <Link to='/signin'>Add to Cart</Link>
+    </button>
+    <button className="bg-orange-300 w-full my-4 rounded-xl border border-orange-400 py-1 hover:bg-orange-400 hover:border-none" title="Buy Now">
+        <Link to='/signin'>Buy Now</Link>
+    </button>
+    <p className="text-gray-500 text-sm">Ships from: <span className="text-gray-600"> Techtop.com</span></p><br />
+    <p className="text-gray-500 text-sm">Returns: <span className="text-sky-600"> Eligible for Return, Refund or Replacement within 30 days of receipt</span></p><br />
+
+
+    
     </div>
 </div>
 ))

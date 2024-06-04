@@ -8,6 +8,8 @@ import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
 import MobileDetails from "./pages/MobileDetails";
 import LaptopDetails from "./pages/LaptopDetails";
+import SignIn from "./pages/SignIn";
+import CreateAccount from "./pages/createAccount";
 
 
 function App() {
@@ -24,9 +26,11 @@ function App() {
           <Route path="contentful-mobile" element={<LandingPage/>} />
           <Route path="details/:mobileId" element = {<MobileDetails />} />
           <Route path="details/:laptopId" element = {<LaptopDetails />} />
+          <Route path='signin' element ={<SignIn />} />
+          <Route path='createaccount' element ={<CreateAccount />} />
         </Route>
       </Routes>
-      {/* <LandingPage/> */}
+      
       <Footer />
     </>
   );
