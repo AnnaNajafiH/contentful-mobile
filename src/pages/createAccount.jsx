@@ -12,7 +12,7 @@ return (
         <input type="text" id='name' className="w-80 mx-8 border rounded-md mb-2 p-1" placeholder="First and last name" /><br />
 
         <label htmlFor="emailPhone" className="my-2 w-80 mx-8 ">Email or mobile phone number</label><br />
-        <input type="text" id='emailPhone' className="w-80 mx-8 border rounded-md mb-2 p-1" /><br />
+        <input type="text" id='emailPhone' className="w-80 mx-8 border rounded-md mb-2 p-1"  /><br />
 
         <label htmlFor="Password" className="my-2 w-80 mx-8 ">Password</label><br />
         <input type="password" id='Password' className="w-80 mx-8 border rounded-md mb-2 p-1" /><br />
@@ -21,7 +21,7 @@ return (
         <input type="password" id='repassword' className="w-80 mx-8 border rounded-md mb-2 p-1" /><br />
 
         <input type="submit" value='Continue' className="bg-yellow-300 my-2 rounded-xl border border-yellow-400 py-1 hover:bg-yellow-400
-                 hover:border-none w-80 mx-8 hover:cursor-pointer" />
+                 hover:border-none w-80 mx-8 hover:cursor-pointer" onClick={(e)=>{e.preventDefault()}} />
         <p className="text-sm mx-auto w-80 my-3">By continuing, you agree to TechTops's
             <Link  to='https://www.termsfeed.com/blog/privacy-policy-url/' className="text-sky-400 hover:underline">
             Conditions of Use and Privacy Notice
