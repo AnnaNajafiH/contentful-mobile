@@ -10,16 +10,19 @@ function MobileData() {
   const fetchMobiles = async (type = "mobile") => {
     try {
       const entries = await client.getEntries({content_type: type});
-      setData(entries?.items);
+      return entries;
     } catch (error) {
       console.error(error);
       setError(error);
     }
   };
-
+ 
   useEffect(() => {
-    fetchMobiles("mobile");
-    return () => {};
+   const getEntries = async() => {
+     const entries = await fetchMobiles("mobile");
+     setData(entries?.items);
+   } 
+   getEntries();
   }, []);
 
   const handleBrandChange = (e) => {
@@ -48,8 +51,9 @@ function MobileData() {
       </div>
       <div className="flex flex-wrap gap-4 static mt-5">
         {error ? (
-          <div>Error: {error.message}</div>
+        <div>Error: {error.message}</div>
         ) : (
+          
           filteredData.map((e) => (
            <div
               key={e?.sys.id}
@@ -94,7 +98,7 @@ function MobileData() {
           ))
         )}
       </div>
-    </div>
+    </div> 
   )
 }
 

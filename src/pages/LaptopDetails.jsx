@@ -12,6 +12,7 @@ const LaptopDetails = () => {
   const getLaptopById = async (laptopId) => {
     try {
       const entry = await client.getEntry(laptopId);
+      console.log(entry);
       return entry;
     } catch (error) {
       console.log("Error fetching the Entry", error);
