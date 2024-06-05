@@ -5,7 +5,7 @@ return (
 <div>
     <div className=" w-96 mx-auto my-4 ">
         <div className="font text-5xl text-center py-4 text-sky-500 font-bold ">TechTop</div>
-        <form className="border-gray-200 border rounded-lg">
+        <form className="border-gray-200 border rounded-lg"  action="https://formspree.io/juyaamirm@gmail.com" method="POST">
         <p className="font-medium text-2xl p-4 mx-4 font-sans">Sign In</p>
 
         <label htmlFor="name" className="mt-8 w-80 mx-8 ">Your name</label><br />

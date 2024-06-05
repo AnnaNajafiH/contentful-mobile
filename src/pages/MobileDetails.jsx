@@ -26,12 +26,12 @@ getMobile();
 }, [mobileId]);
 
 return (
-    !mobile ? <div>Loading....</div> :(
+    !mobile ? <div>Loading....😜😜😜😜</div> :(
 <div className="flex flex-wrap w-5/6 mx-auto my-6 ">
     <div className="w-2/5 p-2 ">
     
         <img src={mobile.image.fields.file.url} alt="mobile image" />
-        <Link onClick={()=> navigate(-1) } className="hover:bg-orange-600 hover:text-white mt-4 rounded"> <i className="fa-solid fa-angles-left"></i></Link>
+        <Link onClick={()=> navigate(-1) } className="hover:bg-orange-600 hover:text-white mt-4 rounded"> <i className="fa-solid fa-angles-left text-orange-400 hover:text-white"></i></Link>
     </div>
 
     <div className="w-2/5 text-lg font-medium px-4 py-2 ">
@@ -80,9 +80,6 @@ return (
     </button>
     <p className="text-gray-500 text-sm">Ships from: <span className="text-gray-600"> Techtop.com</span></p><br />
     <p className="text-gray-500 text-sm">Returns: <span className="text-sky-600"> Eligible for Return, Refund or Replacement within 30 days of receipt</span></p><br />
-
-
-    
     </div>
 </div>
 ))
