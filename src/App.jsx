@@ -20,7 +20,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/">
-          <Route index element={<Phone />} />
+          <Route index element={<Phone />} />___
           <Route path="laptop" element={<Laptop />} />
           <Route path="game" element={<Game />} />
           <Route path="sale" element={<Sale />} />
