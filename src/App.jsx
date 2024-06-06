@@ -32,16 +32,16 @@ function App() {
           <Route path="createaccount" element={<CreateAccount />} />
         </Route>
       </Routes>
-      <div className="flex justify-between mt-2">
+      <div className="flex justify-between  bg-slate-700">
         <button
-          className="py-1  ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
+          className="py-1  mt-2 ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
          text-cyan-400 hover:bg-cyan-400 hover:text-white"
           onClick={() => navigate(-1)}
         >
           Back
         </button>
         <button
-          className="py-1 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
+          className="py-1 mt-2 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
          text-cyan-400 hover:bg-cyan-400 hover:text-white"
           onClick={() => navigate(+1)}
         >
