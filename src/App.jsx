@@ -20,25 +20,34 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/">
-          <Route index element={<Phone />} />___
+          <Route index element={<Phone />} />
+          ___
           <Route path="laptop" element={<Laptop />} />
           <Route path="game" element={<Game />} />
           <Route path="sale" element={<Sale />} />
-          <Route path="contentful-mobile" element={<LandingPage/>} />
-          <Route path="details/:mobileId" element = {<MobileDetails />} />
-          <Route path="details/:laptopId" element = {<LaptopDetails />} />
-          <Route path='signin' element ={<SignIn />} />
-          <Route path='createaccount' element ={<CreateAccount />} />
+          <Route path="contentful-mobile" element={<LandingPage />} />
+          <Route path="details/:mobileId" element={<MobileDetails />} />
+          <Route path="details/:laptopId" element={<LaptopDetails />} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="createaccount" element={<CreateAccount />} />
         </Route>
       </Routes>
-      <div className="flex justify-between relative top-16">
-        <button className='py-1 ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
-         text-cyan-400 hover:bg-cyan-400 hover:text-white' onClick={()=> navigate(-1)}>
-          Back</button>
-        <button className='py-1 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
-         text-cyan-400 hover:bg-cyan-400 hover:text-white' onClick={()=> navigate(+1)} >
-          Forward</button>
-        </div>
+      <div className="flex justify-between mt-2">
+        <button
+          className="py-1  ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white"
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </button>
+        <button
+          className="py-1 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white"
+          onClick={() => navigate(+1)}
+        >
+          Forward
+        </button>
+      </div>
       <Footer />
     </>
   );
