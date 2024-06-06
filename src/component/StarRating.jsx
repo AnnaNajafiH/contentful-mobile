@@ -17,14 +17,4 @@ const StarRating = ({ score }) => {
   );
 };
 
-const Star = () => {
-  const [score, setScore] = useState(3); // 초기 점수 설정
-
-  return (
-    <div>
-      <StarRating score={score} />
-    </div>
-  );
-};
-
-export default Star;
+export default StarRating;
