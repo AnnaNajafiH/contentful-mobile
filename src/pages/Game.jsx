@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
-import Star from "../component/Star.jsx";
+import StarRating from "../component/Star.jsx";
 
 function GameData() {
   const [data, setData] = useState([]);
@@ -74,7 +74,7 @@ function GameData() {
                 {e?.fields.gameName}
               </p>
               <p className="p-1 text-sm">
-              <Star score={e.fields.rating} />
+              <StarRating score={e.fields.rating} />
               </p>
               <button className="text-white bg-cyan-400 w-2/3 h-10 hover:bg-slate-950">
                 More Info
