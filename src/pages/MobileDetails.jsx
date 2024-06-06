@@ -7,7 +7,7 @@ import { RotatingLines,Watch } from 'react-loader-spinner';
 
 const MobileDetails = () => {
 const [mobile, setMobile] = useState(null);
-const navigate = useNavigate();
+//const navigate = useNavigate();
 const {mobileId} = useParams();
 
 const getMobileById = async(mobileId) => {
@@ -102,8 +102,8 @@ return (
             </span></p><br />
         <div className=" text-center text-sm ">
             <p className="mb-4 text-lime-500">Help and Support!</p>
-           <p className="relative left-8"> <Watch visible={true} height="40" width="40" radius="48" color="#4fa94d" ariaLabel="watch-loading"
-                wrapperStyle={{}} wrapperClass="" /></p>
+           <div className="relative left-8"> <Watch visible={true} height="40" width="40" radius="48" color="#4fa94d" ariaLabel="watch-loading"
+                wrapperStyle={{}} wrapperClass="" /></div>
         </div>
     </div>
 </div>
