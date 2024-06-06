@@ -38,9 +38,9 @@ return (
     <div className="w-2/5 p-2 ">
 
         <img src={mobile.image.fields.file.url} alt="mobile image" className=" h-96 hover:cursor-pointer" />
-        <Link onClick={()=> navigate(-1) } className="hover:bg-orange-600 hover:text-white mt-4 rounded">
+{/*         <Link onClick={()=> navigate(-1) } className="hover:bg-orange-600 hover:text-white mt-4 rounded">
         <i className="fa-solid fa-angles-left text-orange-400 hover:text-white pt-4"></i>
-        </Link>
+        </Link> */}
     </div>
 
     <div className="w-2/5 text-lg font-medium pr-8 py-2 ">

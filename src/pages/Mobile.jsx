@@ -51,7 +51,9 @@ function MobileData() {
       </div>
       <div className="flex flex-wrap gap-4 static mt-5">
         {error ? (
-        <div>Error: {error.message}</div>
+        <div>Error: {error.message}
+        <p>looding......</p>
+        </div>
         ) : (
           
           filteredData.map((e) => (

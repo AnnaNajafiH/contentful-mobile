@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Nav from "./component/Nav";
 import Phone from "./pages/Mobile";
 import Laptop from "./pages/Laptop";
@@ -13,6 +13,7 @@ import CreateAccount from "./pages/createAccount";
 
 
 function App() {
+  const navigate = useNavigate();
   return (
     /*  <BrowserRouter> */
     <>
@@ -30,7 +31,14 @@ function App() {
           <Route path='createaccount' element ={<CreateAccount />} />
         </Route>
       </Routes>
-      
+      <div className="flex justify-between relative top-16">
+        <button className='py-1 ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white' onClick={()=> navigate(-1)}>
+          Back</button>
+        <button className='py-1 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white' onClick={()=> navigate(+1)} >
+          Forward</button>
+        </div>
       <Footer />
     </>
   );
