@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 import StarRating from "../component/StarRating.jsx";
+import { Link } from "react-router-dom";
 
 function GameData() {
   const [data, setData] = useState([]);
@@ -77,7 +78,7 @@ function GameData() {
               <StarRating score={e.fields.rating} />
               </p>
               <button className="text-white bg-cyan-400 w-2/3 h-10 hover:bg-slate-950">
-                More Info
+                <Link to={`/details/${e?.sys.id}`}>More Info</Link>
               </button>
               <p className="text-red-600 p-1 text-sm">€{e?.fields.price}</p>
               <div>
