@@ -74,7 +74,7 @@ const Nav = () => {
               }
               to="laptop"
             >
-              Laptop
+              LAPTOP
             </NavLink>
             
           </li>
