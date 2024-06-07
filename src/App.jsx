@@ -4,6 +4,7 @@ import Phone from "./pages/Mobile";
 import Laptop from "./pages/Laptop";
 import Game from "./pages/Game";
 import Sale from "./pages/Sale";
+// import SaleDetails from "./pages/SalesDetails";
 import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
 import MobileDetails from "./pages/MobileDetails";
@@ -21,6 +22,7 @@ function App() {
           <Route path="laptop" element={<Laptop />} />
           <Route path="game" element={<Game />} />
           <Route path="sale" element={<Sale />} />
+          {/* <Route path="sale/:saleId" element={<SaleDetails />} /> */}
           <Route path="contentful-mobile" element={<LandingPage/>} />
           <Route path="details/:mobileId" element = {<MobileDetails />} />
           <Route path="details/:laptopId" element = {<LaptopDetails />} />
