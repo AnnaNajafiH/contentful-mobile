@@ -76,6 +76,7 @@ const Nav = () => {
             >
               Laptop
             </NavLink>
+            
           </li>
           <li>
             <NavLink

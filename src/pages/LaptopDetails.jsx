@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { client } from "./client";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { RotatingLines, Watch } from "react-loader-spinner";
+
 
 const LaptopDetails = () => {
   const [laptop, setLaptop] = useState(null);
@@ -12,6 +14,7 @@ const LaptopDetails = () => {
   const getLaptopById = async (laptopId) => {
     try {
       const entry = await client.getEntry(laptopId);
+      console.log(entry);
       return entry;
     } catch (error) {
       console.log("Error fetching the Entry", error);
@@ -22,22 +25,42 @@ const LaptopDetails = () => {
       const entry = await getLaptopById(laptopId);
       setLaptop(entry.fields);
     };
+    setTimeout(()=>{
     getLaptop();
-  }, [laptopId]);
+  }, 2000);
+},[laptopId]);
 
   return !laptop ? (
-    <div>Loading....</div>
+    <div className="relative inset-x-2/4 top-8 ">
+      {
+        <RotatingLines
+          visible={true}
+          height="96"
+          width="96"
+          color="grey"
+          strokeWidth="5"
+          animationDuration="0.75"
+          ariaLabel="rotating-lines-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
+      }
+    </div>
   ) : (
     <div className="flex flex-wrap w-5/6 mx-auto my-6 ">
       <div className="w-2/5 p-2 ">
-        <img src={laptop.imageLaptop.fields.file.url} alt="laptop image" />
-        <Link
+        <img
+          src={laptop.imageLaptop.fields.file.url}
+          alt="laptop image"
+          className=" h-96 hover:cursor-pointer"
+        />
+        {/* <Link
           onClick={() => navigate(-1)}
           className="hover:bg-orange-600 hover:text-white mt-4 rounded"
         >
           {" "}
           <i className="fa-solid fa-angles-left"></i>
-        </Link>
+        </Link> */}
       </div>
 
       <div className="w-2/5 text-lg font-medium px-4 py-2  ">
@@ -97,8 +120,55 @@ const LaptopDetails = () => {
           </TabPanel>
         </Tabs>
       </div>
+      <div className=" w-1/5 p-2 border rounded-lg">
+        <p className=" p-2 font-light text-lg">
+          <sup>€</sup>
+          {mobile?.price}
+        </p>
+        <p className="mb-2">
+          Delivery <span className="font-bold">{mobile?.delivery}</span>
+        </p>
 
-      <div className=" w-1/5 p-2  "> right side</div>
+        <button
+          className="bg-yellow-300 w-full mt-4 rounded-xl border border-yellow-400 py-1 hover:bg-yellow-400 hover:border-none"
+          title="Buy Now"
+        >
+          <Link to="/signin">Add to Cart</Link>
+        </button>
+        <button
+          className="bg-orange-300 w-full my-4 rounded-xl border border-orange-400 py-1 hover:bg-orange-400 hover:border-none"
+          title="Buy Now"
+        >
+          <Link to="/signin">Buy Now</Link>
+        </button>
+        <p className="text-gray-500 text-sm">
+          Ships from: <span className="text-gray-600"> Techtop.com</span>
+        </p>
+        <br />
+        <p className="text-gray-500 text-sm">
+          Returns:{" "}
+          <span className="text-sky-600">
+            Eligible for Return, Refund or Replacement within 30 days of receipt
+          </span>
+        </p>
+        <br />
+        <div className=" text-center text-sm ">
+          <p className="mb-4 text-lime-500">Help and Support!</p>
+          <p className="relative left-8">
+            {" "}
+            <Watch
+              visible={true}
+              height="40"
+              width="40"
+              radius="48"
+              color="#4fa94d"
+              ariaLabel="watch-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

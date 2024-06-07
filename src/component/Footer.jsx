@@ -56,7 +56,7 @@ const socialMediaLinks = [
 
 const Footer = () => {
   return (
-    <div className="w-full mt-24 bg-slate-700 text-gray-300 py-y px-2 bottom-0 left-0 ">
+    <div className="w-full  bg-slate-700 text-gray-300 py-y px-2 bottom-0 left-0 ">
       <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8">
         {sections.map((section, index) => (
           <div key={index}>
@@ -113,3 +113,6 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+

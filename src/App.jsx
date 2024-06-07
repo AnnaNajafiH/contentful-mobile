@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Nav from "./component/Nav";
 import Phone from "./pages/Mobile";
 import Laptop from "./pages/Laptop";
@@ -9,9 +9,12 @@ import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
 import MobileDetails from "./pages/MobileDetails";
 import LaptopDetails from "./pages/LaptopDetails";
+import SignIn from "./pages/SignIn";
+import CreateAccount from "./pages/createAccount";
 
 
 function App() {
+  const navigate = useNavigate();
   return (
     /*  <BrowserRouter> */
     <>
@@ -22,13 +25,29 @@ function App() {
           <Route path="laptop" element={<Laptop />} />
           <Route path="game" element={<Game />} />
           <Route path="sale" element={<Sale />} />
-          {/* <Route path="sale/:saleId" element={<SaleDetails />} /> */}
-          <Route path="contentful-mobile" element={<LandingPage/>} />
-          <Route path="details/:mobileId" element = {<MobileDetails />} />
-          <Route path="details/:laptopId" element = {<LaptopDetails />} />
+          <Route path="contentful-mobile" element={<LandingPage />} />
+          <Route path="details/:mobileId" element={<MobileDetails />} />
+          <Route path="details/:laptopId" element={<LaptopDetails />} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="createaccount" element={<CreateAccount />} />
         </Route>
       </Routes>
-      {/* <LandingPage/> */}
+      <div className="flex justify-between  bg-slate-700">
+        <button
+          className="py-1  mt-2 ml-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white"
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </button>
+        <button
+          className="py-1 mt-2 mr-12 border-cyan-400 border rounded-2xl px-5 mb-2
+         text-cyan-400 hover:bg-cyan-400 hover:text-white"
+          onClick={() => navigate(+1)}
+        >
+          Forward
+        </button>
+      </div>
       <Footer />
     </>
   );

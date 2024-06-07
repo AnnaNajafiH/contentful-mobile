@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
+import StarRating from "../component/StarRating.jsx";
 
 function GameData() {
   const [data, setData] = useState([]);
@@ -26,26 +27,26 @@ function GameData() {
     }
   };
 
-  const Star = ({ filled }) => {
-    return (
-      <span style={{ color: filled ? 'gold' : 'lightgray' }}>
-        ★
-      </span>
-    );
-  };
-  const [score, setScore] = useState(3); // 초기 점수 설정
+  // const Star = ({ filled }) => {
+  //   return (
+  //     <span style={{ color: filled ? '#ffbb00' : 'lightgray', fontSize: '18px'}}>
+  //       ★
+  //     </span>
+  //   );
+  // };
+  // const [score, setScore] = useState(3); // 초기 점수 설정
 
-  const StarRating = ({ score }) => {
-    const totalStars = 5;
+  // const StarRating = ({ score }) => {
+  //   const totalStars = 5;
   
-    return (
-      <div>
-        {[...Array(totalStars)].map((_, index) => (
-          <Star key={index} filled={index < score} />
-        ))}
-      </div>
-    );
-  };
+  //   return (
+  //     <div>
+  //       {[...Array(totalStars)].map((_, index) => (
+  //         <Star key={index} filled={index < score} />
+  //       ))}
+  //     </div>
+  //   );
+  // };
 
   useEffect(() => {
     fetchMobiles("game", 12, 0);
