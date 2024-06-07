@@ -57,13 +57,13 @@ const Nav = () => {
                 PHONE
               </NavLink>
               {dropdownVisible && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-black border border-gray-200 rounded-md p-4 shadow-lg z-10 w-40">
+                <ul className="absolute top-full left-0 mt-2 bg-white text-black border border-gray-200 rounded-md p-4 shadow-lg z-10 w-40">
                   <li>Samsung</li>
                   <li>Apple</li>
                   <li>Google</li>
                   <li>Huawei</li>
                   <li>Xiaomi</li>
-                </div>
+                </ul>
               )}
             </div>
           </li>
