@@ -4,6 +4,7 @@ import Phone from "./pages/Mobile";
 import Laptop from "./pages/Laptop";
 import Game from "./pages/Game";
 import Sale from "./pages/Sale";
+// import SaleDetails from "./pages/SalesDetails";
 import Footer from "./component/Footer";
 import LandingPage from "./pages/LandingPage";
 import MobileDetails from "./pages/MobileDetails";
