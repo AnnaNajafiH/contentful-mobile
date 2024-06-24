@@ -6,7 +6,6 @@ const CreateAccount = () => {
     const [data, setData] = useState({
         name: '',
         email: "",
-        number: "",
         password: ''
       });
       
@@ -18,7 +17,7 @@ const CreateAccount = () => {
       const handleSubmit = (e) => {
         e.preventDefault();
         try {
-          axios.post(`http://localhost:8000/sign-in`, data)
+          axios.post(`http://localhost:8000/sign-up`, data)
           .then(res=> console.log(res));
         } catch (error) {
           console.error('Error in creating the user');
@@ -27,7 +26,6 @@ const CreateAccount = () => {
                 {
                 name: '',    
                 email: "",
-                number: "",
                 password: ''
                 }
             )
@@ -40,7 +38,7 @@ return (
 
 
     <form onSubmit={handleSubmit} className="border-gray-200 border rounded-lg">
-    <p className="font-medium text-2xl p-4 mx-4 font-sans">Sign In</p>
+    <p className="font-medium text-2xl p-4 mx-4 font-sans">Sign Up</p>
       <label htmlFor="name" className="mt-8 w-80 mx-8 ">Name: </label>
       <input type="text" name='name' value ={data.name} onChange={handleChange} 
       className="w-80 mx-8 border rounded-md mb-2 p-1" required/>
@@ -49,9 +47,9 @@ return (
       <input type="text" name='email' value ={data.email} onChange={handleChange}
       className="w-80 mx-8 border rounded-md mb-2 p-1" required/>
 
-      <label htmlFor="number" className="my-2 w-80 mx-8 ">Number</label>
+{/*       <label htmlFor="number" className="my-2 w-80 mx-8 ">Number</label>
       <input type="text" name='number' value ={data.number} onChange={handleChange} 
-      className="w-80 mx-8 border rounded-md mb-2 p-1" required/>
+      className="w-80 mx-8 border rounded-md mb-2 p-1" required/> */}
 
       <label htmlFor="password" className="my-2 w-80 mx-8 ">Password: </label>
       <input type="password" name='password' value ={data.password} onChange={handleChange}

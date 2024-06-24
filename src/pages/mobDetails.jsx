@@ -10,7 +10,7 @@ const MobDetails = () => {
 const {mobileId} = useParams();
 const {data, error, loading} = useFetch(`http://localhost:8000/mobiles/${mobileId}`);
 
-console.log(data);
+//console.log(data);
 if(error) return console.error('Error in Fetching the data');
 if(loading) return <div className="relative inset-x-2/4 top-8 bo">{
     (<RotatingLines visible={true} height="96" width="96" color="grey" strokeWidth="5" animationDuration="0.75"

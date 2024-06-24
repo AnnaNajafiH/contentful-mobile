@@ -7,7 +7,7 @@ import { RotatingLines,Watch } from 'react-loader-spinner';
 const Mobiles = () => {
   const [selectBrand, setSelectBrand] = useState('all');
     const {data, error, loading} = useFetch(`http://localhost:8000/mobiles`);
-    console.log(data);
+    //console.log(data);
     if(error) return console.error('Error in Fetching the data');
     if(loading) return <div className="relative inset-x-2/4 top-8 bottom-8">{
       (
@@ -19,14 +19,7 @@ const Mobiles = () => {
     }
     const filteredData = selectBrand === 'all'? data: data.filter(e => e.brand === selectBrand);
   return (
-/*     <div className="flex flex-wrap">
-        {data?.map((mobile) => (
-                <div key={mobile.mobile_id} className="h-60 w-40 border m-4 p-2">
-                    <img className="h-40 w-full" src={mobile.image_url} />
-                    <p>{mobile.mobile_name}</p>
-                </div>   
-        ))}
-    </div> */
+
     <div className="w-5/6 mx-auto  my-4">
     <div className="text-center p-4 mb-4 relative">
       <h1 className="font-bold text-3xl text-gray-800 animation animate-pink">WELCOME TO TechTop!</h1> <br />
